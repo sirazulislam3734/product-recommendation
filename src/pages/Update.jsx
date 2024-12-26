@@ -14,10 +14,8 @@ const Update = () => {
   const [queries, setQueries] = useState([]);
   useEffect(() => {
     const newUpdate = data.filter((query) => query._id === id);
-    console.log(newUpdate[0]);
     setQueries(newUpdate[0]);
   }, [data, id, queries]);
-  console.log(queries);
 
   const handleUpdateQueries = (e) => {
     e.preventDefault();

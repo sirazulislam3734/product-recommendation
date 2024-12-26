@@ -36,51 +36,48 @@ const RecommendationsForMe = () => {
                         className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500"
                       >
                         <div className="flex items-center gap-x-3">
-                          <span>Title</span>
+                          <span>Name & Email</span>
                         </div>
                       </th>
                       <th
                         scope="col"
                         className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500"
-                      >
+                        >
                         <div className="flex items-center gap-x-3">
-                          <span>Email</span>
+                        <span>Title</span>
                         </div>
                       </th>
 
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
-                      >
-                        <span>Deadline</span>
+                        >
+                        <span>Email</span>
                       </th>
 
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
-                      >
+                        >
                         <button className="flex items-center gap-x-2">
-                          <span>Product_Name</span>
+                        <span>Deadline</span>
                         </button>
                       </th>
 
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
-                      >
-                        Reason
+                        >
+                        <span>Product_Name</span>
                       </th>
 
                       <th
                         scope="col"
                         className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
-                      >
-                        Status
+                        >
+                        Reason
                       </th>
-
-                      <th className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
-                        Actions
-                      </th>
+                      
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200 ">

@@ -1,8 +1,8 @@
 import React from "react";
+import { MdOutlineDeleteForever } from "react-icons/md";
 
-const RecommendationCard = ({ recommendation }) => {
-  const { title, email,photo,name, deadline, product_name, reason, status } =
-    recommendation || {};
+const MyRecommendationCard = ({ recommendation}) => {
+    const { title, email,photo,name, deadline, product_name, reason, } = recommendation || {};
   return (
     <tr>
       <td>
@@ -22,10 +22,6 @@ const RecommendationCard = ({ recommendation }) => {
         {title}
       </td>
       <td className="px-4 py-4 text-sm text-gray-500  whitespace-nowrap">
-        {email}
-      </td>
-
-      <td className="px-4 py-4 text-sm text-gray-500  whitespace-nowrap">
         {deadline}
       </td>
 
@@ -43,8 +39,12 @@ const RecommendationCard = ({ recommendation }) => {
           </p>
         </div>
       </td>
+      <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+        <span><MdOutlineDeleteForever size={25} /></span>
+      </td>
     </tr>
   );
 };
 
-export default RecommendationCard;
+export default MyRecommendationCard;
+ // <MdOutlineDeleteForever size={25} />
