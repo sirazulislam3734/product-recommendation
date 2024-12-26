@@ -9,6 +9,8 @@ import RecommendationsForMe from "../pages/RecommendationsForMe";
 import AddQueries from "../pages/AddQueries";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../components/Home";
+import QueriesDetails from "../pages/QueriesDetails";
+import Update from "../pages/Update";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +47,15 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUp />,
+      },
+      {
+        path: "/queryDetails/:id",
+        element: <QueriesDetails />,
+      },
+      {
+        path: "/update/:id",
+        element: <Update />,
+        loader: () => fetch('http://localhost:4000/addQueries')
       },
     ],
   },

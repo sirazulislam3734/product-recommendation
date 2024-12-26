@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Lottie from "lottie-react";
-import lottieImg from '../assets/signUp.json'
+import lottieImg from "../assets/signUp.json";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
@@ -17,12 +17,11 @@ const SignUp = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    const form = e.target;
-    const email = form.email.value;
-    const name = form.name.value;
-    const photo = form.photo.value;
-    const password = form.password.value;
-    console.log({ email, password, name, photo });
+    const name = e?.target?.name?.value;
+    const email = e?.target?.email?.value;
+    const password = e?.target?.password?.value;
+    const photo = e?.target?.photo?.value;
+    console.log(name, photo, email, password);
 
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
@@ -180,7 +179,7 @@ const SignUp = () => {
           </div>
           <div className="flex-1 bg-indigo-100 text-center hidden lg:flex">
             <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
-                <Lottie animationData={lottieImg}></Lottie>
+              <Lottie animationData={lottieImg}></Lottie>
             </div>
           </div>
         </div>

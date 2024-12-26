@@ -1,35 +1,45 @@
+import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const ProductCard = ({query}) => {
-    const {Boycotting, deadline, product_name, product_brand, photo, email, title, recommendation_count} = query || {}
+const ProductCard = ({ query, setQueries, queries }) => {
+    const {Boycotting, _id, deadline, product_name, product_brand, photo, email, title, recommendation_count} = query || {}
+
+    const handleDeleteBtn = id => {
+            console.log(id);
+            axios.delete(`http://localhost:4000/addQueries/${id}`)
+            .then(res => {
+                console.log(res.data);
+            })
+    }
   return (
     <div className="">
-      <div className="group hover:saturate-100 saturate-0 rounded-xl transition-[filter] relative bg-[#FAEDE4] font-['Robot_Flex'] border-b-2 p-5 border-b-[#F04E29]">
+      <div className="group hover:saturate-100 saturate-0 rounded-xl transition-[filter] relative bg-[#FAEDE4] font-['Robot_Flex'] border-b-2 lg:p-5 md:p-3 p-5 border-b-[#F04E29]">
         <img
-          className="group-hover:rounded-br-[100px] mb-2 w-full rounded-xl rounded-br-[0px] transition-[border-radius]"
+          className="group-hover:rounded-br-[100px] h-96 mb-2 w-full rounded-xl rounded-br-[0px] transition-[border-radius]"
           src={photo}
         />
         <div className="">
-        <span className="text-[#777674] flex-1 mr-5"><span className="text-black font-semibold">Name :</span> {product_name}</span>
-        <span className="text-[#777674] flex-1 ml-5"><span className="text-black font-semibold">Brand :</span> {product_brand}</span>
+        <span className="text-gray-400 flex-1 mr-5"><span className="text-black font-semibold">Pro_Name :</span> {product_name}</span>
+        <span className="text-gray-400 flex-1 ml-5"><span className="text-black font-semibold">Pro_Brand :</span> {product_brand}</span>
         
-        <p className="text-[#777674] text-lg"><span className="text-black font-semibold">Email :</span> {email}</p>
+        <p className="text-gray-400 text-lg"><span className="text-black font-semibold">Email :</span> {email}</p>
         
-        <p className="text-[#777674] flex-1"><span className="text-black font-semibold">Query Title :</span> {title}</p>
-        <p className="text-[#777674] flex-1"><span className="text-black font-semibold">Date :</span> {deadline}</p>
+        <p className="text-gray-400 flex-1"><span className="text-black font-semibold">Query Title :</span> {title}</p>
+        <p className="text-gray-400 flex-1"><span className="text-black font-semibold">Date :</span> {deadline}</p>
         
-        <p className="text-[#777674] text-lg"><span className="text-black font-semibold">Boycotting Reason :</span> {Boycotting.substring(0, 15)} ...</p>
-        <span className="text-[#777674] text-lg"><span className="text-black font-semibold">Recommendation-count :</span> {recommendation_count}</span>
+        <p className="text-gray-400 text-lg"><span className="text-black font-semibold">Boycotting Reason :</span> {Boycotting.substring(0, 15)} ...</p>
+        <span className="text-gray-400 text-lg"><span className="text-black font-semibold">Recommendation-count :</span> ({recommendation_count})</span>
         </div>
         <div className="space-x-3 mt-3">
-            <Link><button className="px-6 py-2 font-serif hover:text-white hover:bg-black border-gray-700 rounded-xl text-lg border">Details</button></Link>
-            <Link><button className="px-6 py-2 font-serif hover:text-white hover:bg-green-400 border-gray-700 rounded-xl text-lg border">Edit</button></Link>
-            <Link><button className="px-6 py-2 font-serif hover:text-white hover:bg-red-400 border-gray-700 rounded-xl text-lg border">Delete</button></Link>
+            <Link to={`/queryDetails/${_id}`}><button className="px-6 py-2 font-serif hover:text-white mb-2 hover:bg-black border-gray-700 rounded-xl text-lg border">Details</button></Link>
+            <Link to={`/update/${_id}`}><button className="px-6 py-2 font-serif hover:text-white hover:bg-green-400 mb-2 border-gray-700 rounded-xl text-lg border">Update</button></Link>
+            <Link><button onClick={() => handleDeleteBtn(_id)} className="px-6 py-2 font-serif hover:text-white mb-2 hover:bg-red-400 border-gray-700 rounded-xl text-lg border">Delete</button></Link>
         </div>
 
         <svg
-          className="group-hover:opacity-100 opacity-0 transition-opacity absolute right-[10px] bottom-[40px]"
+          className="group-hover:opacity-100 opacity-0 transition-opacity absolute right-[10px] bottom-[72px]"
           xmlns="http://www.w3.org/2000/svg"
           width="45"
           height="64"
