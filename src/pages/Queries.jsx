@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Queries = () => {
   const initialData = useLoaderData();
@@ -30,10 +31,12 @@ const Queries = () => {
     setSortOrder("");
     setQueries(initialData); // Reset to initial loader data
   };
-
-  console.log(search, sortOrder);
+  
   return (
     <div className="container px-6 py-10 mx-auto min-h-[calc(100vh-306px)] flex flex-col justify-between">
+        <Helmet>
+            <title>All Queries</title>
+        </Helmet>
       <div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-5">
           <form onSubmit={(e) => e.preventDefault()}>

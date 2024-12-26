@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
       console.log(data);
     }
     setLoading(false)
-    })
+  })
     return () => {
       return unsubscribe()
     }

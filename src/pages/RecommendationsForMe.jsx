@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import RecommendationCard from "../components/RecommendationCard";
+import { Helmet } from "react-helmet";
 
 const RecommendationsForMe = () => {
   const { user } = useContext(AuthContext);
@@ -14,6 +15,9 @@ const RecommendationsForMe = () => {
   }, [recommendations, user]);
   return (
     <div>
+      <Helmet>
+        <title>Recommendation Requests</title>
+      </Helmet>
       <section className="container lg:p-5 dark:bg-black dark:text-white px-4 mx-auto my-12">
         <div className="flex items-center gap-x-3">
           <h2 className="text-lg font-medium text-gray-800 dark:text-white">Recommendation Requests</h2>

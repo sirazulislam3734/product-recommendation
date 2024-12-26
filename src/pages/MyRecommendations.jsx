@@ -4,6 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import axios from "axios";
 import MyRecommendationCard from "../components/MyRecommendationCard";
 import Lottie from "lottie-react";
+import { Helmet } from "react-helmet";
 
 const MyRecommendations = () => {
   const { user } = useContext(AuthContext);
@@ -16,6 +17,9 @@ const MyRecommendations = () => {
   }, [user]);
   return (
     <section className="container px-4 dark:bg-black dark:text-white mx-auto my-12">
+      <Helmet>
+        <title>My Recommendation</title>
+      </Helmet>
         <div className="flex items-center gap-x-3">
           <h2 className="text-lg font-medium text-gray-800 dark:text-white ">My Recommendation</h2>
 

@@ -4,6 +4,7 @@ import noDataImg from "../assets/noData.json";
 import { AuthContext } from "../providers/AuthProvider";
 import ProductCard from "../components/ProductCard";
 import Lottie from "lottie-react";
+import { Helmet } from "react-helmet";
 
 const MyQueries = () => {
   const { user } = useContext(AuthContext); // Get the user from the context
@@ -39,7 +40,9 @@ const MyQueries = () => {
 
   return (
     <div className="lg:px-16 md:px-8 px-2">
-       
+       <Helmet>
+        <title>My Queries</title>
+       </Helmet>
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-20">
         <div className="relative isolate overflow-hidden bg-white dark:bg-black dark:text-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-4xl">
