@@ -33,7 +33,7 @@ export default function Carousel() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="hero-content lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
+          <div className="hero-content dark:bg-black dark:text-white lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
             <img
               src={bgimg1}
               className="w-full md:max-w-md h-52 rounded-lg shadow-2xl"
@@ -72,7 +72,7 @@ export default function Carousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="hero-content lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
+          <div className="hero-content dark:bg-black dark:text-white lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
             <img
               src={bgimg2}
               className="w-full md:max-w-md h-52 rounded-lg shadow-2xl"
@@ -114,7 +114,7 @@ export default function Carousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="hero-content lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
+          <div className="hero-content dark:bg-black dark:text-white lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
             <img
               src={bgimg3}
               className="w-full md:max-w-md h-52 rounded-lg shadow-2xl"

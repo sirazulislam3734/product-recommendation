@@ -13,7 +13,7 @@ const ExtraSection1 = () => {
           />
         </div>
 
-        <div class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
+        <div class="max-w-lg bg-white dark:bg-black dark:text-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
           <div class="flex flex-col lg:p-12 md:p-8 p-3 md:px-16">
             <h2 class="text-2xl font-medium uppercase text-green-800 lg:text-4xl">
             Product Recommendation

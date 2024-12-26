@@ -21,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch('http://localhost:4000/addQueries')
       },
       {
         path: "/queries",

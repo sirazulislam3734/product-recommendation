@@ -1,6 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import img from "../assets/download (2).jpeg";
 import Swal from "sweetalert2";
+import { IoMoon } from "react-icons/io5";
+import { IoSunny } from "react-icons/io5";
+// import { IconContext } from "react-icons";
 import { TiDocumentAdd } from "react-icons/ti";
 import { BsFilePerson } from "react-icons/bs";
 import { LuGitPullRequestDraft } from "react-icons/lu";
@@ -11,6 +14,12 @@ import { Helmet } from "react-helmet-async";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [dark, setDark] = useState(false);
+
+  const darkModeHandler = () => {
+    setDark(!dark);
+    document.body.classList.toggle("dark");
+  };
 
   const handleSignOut = () => {
     logOut()
@@ -125,6 +134,16 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
+          <button onClick={() => darkModeHandler()}>
+            {
+              dark && <IoSunny /> // render sunny when dark is true
+            }
+            {
+              !dark && <IoMoon /> // render moon when dark is false
+            }
+          </button>
+          </div>
+          <div className="navbar-end">
             {user ? (
               <>
                 <div className="dropdown dropdown-end">
@@ -166,16 +185,24 @@ const Navbar = () => {
 
                     <ul className="space-y-2 my-2 text-lg">
                       <li className="bg-slate-100 md:text-lg text-sm rounded-lg">
-                        <Link to="/addQueries"><TiDocumentAdd size={25} /> Add Queries</Link>
+                        <Link to="/addQueries">
+                          <TiDocumentAdd size={25} /> Add Queries
+                        </Link>
                       </li>
                       <li className="bg-slate-100 md:text-lg text-sm rounded-lg">
-                        <Link to="/myQueries"><TiUserAdd size={25} /> My Queries</Link>
+                        <Link to="/myQueries">
+                          <TiUserAdd size={25} /> My Queries
+                        </Link>
                       </li>
                       <li className="bg-slate-100 md:text-lg text-sm rounded-lg">
-                        <Link to="/myRecommendations"><BsFilePerson size={20} /> My Recommendations</Link>
+                        <Link to="/myRecommendations">
+                          <BsFilePerson size={20} /> My Recommendations
+                        </Link>
                       </li>
                       <li className="bg-slate-100 md:text-lg text-sm rounded-lg">
-                        <Link to="/recommendationsFor"><LuGitPullRequestDraft size={20} /> Recommendations For Me
+                        <Link to="/recommendationsFor">
+                          <LuGitPullRequestDraft size={20} /> Recommendations
+                          For Me
                         </Link>
                       </li>
                     </ul>

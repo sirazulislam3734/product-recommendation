@@ -1,8 +1,49 @@
+import axios from "axios";
 import React from "react";
 import { MdOutlineDeleteForever } from "react-icons/md";
+import Swal from "sweetalert2";
 
-const MyRecommendationCard = ({ recommendation}) => {
-    const { title, email,photo,name, deadline, product_name, reason, } = recommendation || {};
+const MyRecommendationCard = ({ recommendation, recommendations, setRecommendations}) => {
+    const { title, email,photo,name, deadline, product_name, reason, _id } = recommendation || {};
+
+    const handleDeleteButton = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              axios
+                .delete(`http://localhost:4000/recommendations/${id}`)
+                .then((res) => {
+                  if (res.status === 200) {
+                    Swal.fire("Deleted!", "My Recommendation has been deleted.", "success");
+      
+                    // Update state to remove the deleted item
+                    const updatedRecommendation = recommendations.filter((item) => item._id !== id);
+                    setRecommendations(updatedRecommendation);
+                  } else {
+                    Swal.fire(
+                      "Error!",
+                      "There was a problem deleting the query.",
+                      "error"
+                    );
+                  }
+                })
+                .catch(() => {
+                  Swal.fire(
+                    "Error!",
+                    "There was a problem deleting the query.",
+                    "error"
+                  );
+                });
+            }
+          });
+    }
   return (
     <tr>
       <td>
@@ -40,7 +81,9 @@ const MyRecommendationCard = ({ recommendation}) => {
         </div>
       </td>
       <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+        <button onClick={() => handleDeleteButton(_id)}>
         <span><MdOutlineDeleteForever size={25} /></span>
+        </button>
       </td>
     </tr>
   );

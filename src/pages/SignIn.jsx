@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Lottie from "lottie-react";
 
+
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
@@ -17,7 +18,10 @@ const SignIn = () => {
   // Google Signin
   const handleGoogleSignIn = async () => {
     try {
-      await signInWithGoogle();
+    await signInWithGoogle();
+      // // jwt token
+      // const {data} = await axios.post("http://localhost:4000/jwt", {email: result?.user?.email});
+      // console.log(data);
       Swal.fire({
         title: "success!",
         text: "Sign In Successful!",
