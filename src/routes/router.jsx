@@ -50,11 +50,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/queryDetails/:id",
-        element: <QueriesDetails />,
+        element: <PrivateRoute><QueriesDetails /></PrivateRoute>,
       },
       {
         path: "/update/:id",
-        element: <Update />,
+        element: <PrivateRoute><Update /></PrivateRoute>,
         loader: () => fetch('http://localhost:4000/addQueries')
       },
     ],

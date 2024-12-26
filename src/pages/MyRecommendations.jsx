@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MdOutlineDeleteForever } from "react-icons/md";
+import { AuthContext } from "../providers/AuthProvider";
+import axios from "axios";
 
 const MyRecommendations = () => {
+  const { user } = useContext(AuthContext);
+  const [recommendations, setRecommendations] = useState([]);
+  useEffect(() => {
+    axios.get(`http://localhost:4000/recommendations/${user?.email}`)
+    .then((res) => {
+      console.log(res.data);
+      setRecommendations(res.data);
+    });
+  }, [user]);
+  console.log(recommendations);
   return (
     <section className="container px-4 mx-auto my-12">
       <div className="flex items-center gap-x-3">

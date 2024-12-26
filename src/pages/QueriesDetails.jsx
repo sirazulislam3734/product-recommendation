@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const QueriesDetails = () => {
+  const { user } = useContext(AuthContext);
   const { id } = useParams();
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
@@ -40,24 +41,26 @@ const QueriesDetails = () => {
     addRecommendationData.queryProductName = product_name;
     addRecommendationData.queryUserEmail = userData?.email;
     addRecommendationData.queryUserName = userData?.name;
+    addRecommendationData.status = "pending";
     console.log(addRecommendationData);
 
-    axios.post("http://localhost:4000/recommendations", addRecommendationData)
-    .then((res) => {
-      Swal.fire({
-        title: "ERROR",
-        text: `${res.data}`,
-        icon: "error",
-      });
-      if (res.data.insertedId) {
+    axios
+      .post("http://localhost:4000/recommendations", addRecommendationData)
+      .then((res) => {
         Swal.fire({
-          title: "Good Job",
-          text: "Recommendation Added Successfully!",
-          icon: "success",
+          title: "ERROR",
+          text: `${res.data}`,
+          icon: "error",
         });
-        navigate("/myRecommendations");
-      }
-    });
+        if (res.data.insertedId) {
+          Swal.fire({
+            title: "Good Job",
+            text: "Recommendation Added Successfully!",
+            icon: "success",
+          });
+          navigate("/myRecommendations");
+        }
+      });
   };
   return (
     <div>
@@ -150,6 +153,7 @@ const QueriesDetails = () => {
                       name="name"
                       placeholder="Your Name"
                       type="text"
+                      value={user?.name}
                       className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                     />
                   </div>
@@ -158,6 +162,7 @@ const QueriesDetails = () => {
                     <input
                       name="email"
                       type="email"
+                      value={user?.email}
                       placeholder="Your Email"
                       className="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                     />
