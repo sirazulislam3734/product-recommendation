@@ -5,6 +5,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import ProductCard from "../components/ProductCard";
 import Lottie from "lottie-react";
 import { Helmet } from "react-helmet";
+import { Slide } from "react-awesome-reveal";
 
 const MyQueries = () => {
   const { user } = useContext(AuthContext); // Get the user from the context
@@ -40,17 +41,17 @@ const MyQueries = () => {
 
   return (
     <div className="lg:px-16 md:px-8 px-2">
-       <Helmet>
+      <Helmet>
         <title>My Queries</title>
-       </Helmet>
+      </Helmet>
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-20">
         <div className="relative isolate overflow-hidden bg-white dark:bg-black dark:text-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-4xl">
-          Add Query !
+            Add Query !
           </h2>
 
           <h3 className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-500">
-          If you have any questions, you can go here
+            If you have any questions, you can go here
           </h3>
 
           <div className="mt-8 flex items-center justify-center gap-x-6">
@@ -115,7 +116,9 @@ const MyQueries = () => {
         </div>
       </div>
       <div className="flex items-center gap-x-3 lg:px-10 md:px-5 px-2 my-5">
-        <h2 className="text-lg font-medium text-gray-800 dark:text-white">My Queries</h2>
+        <h2 className="text-lg font-medium text-gray-800 dark:text-white">
+          My Queries
+        </h2>
 
         <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full ">
           {queries.length} Queries
@@ -125,14 +128,17 @@ const MyQueries = () => {
         <>
           {/* Queries Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:px-10 md:px-5 px-2 md:my-10 my-5">
-            {sortedQueries.map((query) => (
-              <ProductCard
-                key={query._id}
-                setQueries={setQueries}
-                query={query}
-                queries={queries}
-              />
-            ))}
+            <Slide 
+              direction="right">
+              {sortedQueries.map((query) => (
+                <ProductCard
+                  key={query._id}
+                  setQueries={setQueries}
+                  query={query}
+                  queries={queries}
+                />
+              ))}
+            </Slide>
           </div>
         </>
       ) : (

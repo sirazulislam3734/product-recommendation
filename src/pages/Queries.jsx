@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { Slide } from "react-awesome-reveal";
 
 const Queries = () => {
   const initialData = useLoaderData();
@@ -76,9 +77,14 @@ const Queries = () => {
           </button>
         </div>
         <div className="grid grid-cols-1 gap-5 mt-8 xl:mt-16 md:grid-cols-2 lg:grid-cols-3">
+          <Slide
+            direction="up"
+            triggerOnce
+            duration="1000">
           {queries.map((query) => (
             <ProductCard key={query._id} query={query}></ProductCard>
           ))}
+          </Slide>
         </div>
       </div>
     </div>

@@ -70,7 +70,7 @@ const ProductCard = ({ query, setQueries, queries }) => {
             </span>{" "}
             {product_name}
           </span>
-          <span className="text-gray-400 flex-1 ml-5">
+          <span className="text-gray-400 flex-1">
             <span className="text-black dark:text-white font-semibold">
               Pro_Brand:
             </span>{" "}

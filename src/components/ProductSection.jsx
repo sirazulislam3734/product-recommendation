@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import { Slide } from "react-awesome-reveal";
 
 const ProductSection = ({ data }) => {
   return (
@@ -10,6 +11,10 @@ const ProductSection = ({ data }) => {
             Select a Product section to get started
           </h2>
           <div className="grid grid-cols-1 gap-5 mt-8 xl:mt-16 md:grid-cols-2 lg:grid-cols-3">
+            <Slide
+              direction="left"
+              triggerOnce
+              duration="1000">
             {data.map((query) => (
               <ProductCard
                 key={query._id}
@@ -18,6 +23,7 @@ const ProductSection = ({ data }) => {
                 query={query}
               ></ProductCard>
             ))}
+            </Slide>
           </div>
         </div>
       </div>

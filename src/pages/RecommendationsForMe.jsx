@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import RecommendationCard from "../components/RecommendationCard";
 import { Helmet } from "react-helmet";
+import { Slide } from "react-awesome-reveal";
 
 const RecommendationsForMe = () => {
   const { user } = useContext(AuthContext);
@@ -84,12 +85,14 @@ const RecommendationsForMe = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white dark:bg-black dark:text-white divide-y divide-gray-200 ">
+                    
                     {
                       recommendations.map(recommendation => <RecommendationCard
                          key={recommendation._id}
                          recommendation={recommendation}
                          ></RecommendationCard>)
                     }
+                    
                   </tbody>
                 </table>
               </div>

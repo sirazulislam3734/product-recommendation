@@ -4,6 +4,7 @@ import ExtraSection1 from './ExtraSection1';
 import ProductSection from './ProductSection';
 import { useLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import ExtraSection2 from './ExtraSection2';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <ExtraSection1></ExtraSection1>
             <Carousel></Carousel>
             <ProductSection data={data}></ProductSection>
+            <ExtraSection2></ExtraSection2>
         </div>
     );
 };

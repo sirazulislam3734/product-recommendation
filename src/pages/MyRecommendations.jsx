@@ -5,6 +5,7 @@ import axios from "axios";
 import MyRecommendationCard from "../components/MyRecommendationCard";
 import Lottie from "lottie-react";
 import { Helmet } from "react-helmet";
+import { Slide } from "react-awesome-reveal";
 
 const MyRecommendations = () => {
   const { user } = useContext(AuthContext);
@@ -82,6 +83,7 @@ const MyRecommendations = () => {
                    </tr>
                  </thead>
                  <tbody className="bg-white divide-y divide-gray-200 ">
+                   
                    {
                      recommendations.map(recommendation => <MyRecommendationCard
                         key={recommendation._id}
@@ -90,6 +92,7 @@ const MyRecommendations = () => {
                         setRecommendations={setRecommendations}
                         ></MyRecommendationCard>)
                    }
+                   
                  </tbody>
                </table></> 
                  :<>
