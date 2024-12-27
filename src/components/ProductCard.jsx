@@ -5,15 +5,15 @@ import Swal from "sweetalert2";
 
 const ProductCard = ({ query, setQueries, queries }) => {
   const {
-    Boycotting = "",
+    Boycotting ,
     _id,
     deadline,
-    product_name = "N/A",
-    product_brand = "N/A",
-    photo = "https://via.placeholder.com/150", // Fallback image
+    product_name ,
+    product_brand ,
+    photo , // Fallback image
     email,
-    title = "N/A",
-    recommendation_count = 0,
+    title ,
+    recommendation_count,
   } = query || {};
 
   const handleDeleteBtn = (id) => {
