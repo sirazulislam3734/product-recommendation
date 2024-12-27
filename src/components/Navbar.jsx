@@ -133,7 +133,7 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end lg:mx-5">
           <button onClick={() => darkModeHandler()}>
             {
               dark && <IoSunny /> // render sunny when dark is true
