@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const MainLayOuts = () => {
     return (
-        <div className='dark:bg-gray-800 lg:min-h-screen'>
+        <div className='dark:bg-gray-800 container mx-auto lg:min-h-screen'>
             <Navbar></Navbar>
             <Outlet/>
             <Footer></Footer>

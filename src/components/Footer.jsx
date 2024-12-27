@@ -29,39 +29,39 @@ const Footer = () => {
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+            Key Features
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a className="text-gray-600 hover:text-gray-800">User Authentication</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Product Name Search</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Personalized Recommendations</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Administrative Controls</a>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+            NPM Packages Used
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                <a className="text-gray-600 hover:text-gray-800">Express</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                <a className="text-gray-600 hover:text-gray-800">cookie-parser</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                <a className="text-gray-600 hover:text-gray-800">jsonwebtoken (JWT)</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                <a className="text-gray-600 hover:text-gray-800">MongoDB</a>
               </li>
             </nav>
           </div>

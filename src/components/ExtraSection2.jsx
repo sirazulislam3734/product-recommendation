@@ -1,20 +1,18 @@
 import React from "react";
-import Img1 from "../assets/recommendation.png";
-import Img2 from "../assets/qualified.png";
+import { FaHandHoldingUsd } from "react-icons/fa";
+import { FaRProject } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
 
 const ExtraSection2 = () => {
   return (
     <div className="dark:bg-gray-800 dark:text-white px-4 md:px-8 lg:px-16">
-      <div className="relative lg:flex space-y-3 justify-between lg:px-5 items-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+      <div className="relative lg:flex space-y-3 gap-5 justify-between lg:px-5 items-center overflow-hidden bg-gray-50 dark:bg-gray-800 dark:text-white py-6 sm:py-12">
         <Fade direction="left">
-        <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+        <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white dark:bg-gray-800 dark:text-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
           <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[10]"></span>
           <div class="relative z-10 mx-auto max-w-md">
             <span class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
-              <img
-                src={Img1}
-                alt=""
+              <FaHandHoldingUsd
                 class="h-10 w-10 text-white transition-all"
               />
             </span>
@@ -38,7 +36,7 @@ const ExtraSection2 = () => {
         </div>
         </Fade>
         <Fade direction="up">
-        <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+        <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white dark:bg-gray-800 dark:text-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
           <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[10]"></span>
           <div class="relative z-10 mx-auto max-w-md">
             <span class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
@@ -77,11 +75,11 @@ const ExtraSection2 = () => {
         </div>
         </Fade>
         <Fade direction="right">
-        <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
+        <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white dark:bg-gray-800 dark:text-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
           <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[10]"></span>
           <div class="relative z-10 mx-auto max-w-md">
             <span class="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
-              <img src={Img2} alt="" class="h-10 w-10 text-white transition-all" />
+              <FaRProject class="h-10 w-10 text-white transition-all" />
             </span>
             <div class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
               <p>

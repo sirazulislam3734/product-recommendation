@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import Slide from "./Slide";
 
 import bgimg1 from "../assets/img1.jpeg";
 import bgimg2 from "../assets/images2.jpeg";
