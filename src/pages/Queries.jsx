@@ -15,7 +15,7 @@ const Queries = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/addQueries`, {
+        const res = await axios.get(`https://product-recommendation-server-beta.vercel.app/addQueries`, {
           params: { searchParams: search, sortOrder },
         });
         setQueries(res.data);

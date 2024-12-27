@@ -28,7 +28,7 @@ const ProductCard = ({ query, setQueries, queries }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:4000/delete/${id}`)
+          .delete(`https://product-recommendation-server-beta.vercel.app/delete/${id}`)
           .then((res) => {
             if (res.status === 200) {
               Swal.fire("Deleted!", "Your Queries deleted.", "success");

@@ -20,7 +20,7 @@ const AddQueries = () => {
     addQueriesData.recommendation_count = 0;
     console.log(addQueriesData)
     
-    axios.post('http://localhost:4000/addQueries', addQueriesData)
+    axios.post('https://product-recommendation-server-beta.vercel.app/addQueries', addQueriesData)
     .then(res => { 
         console.log(res.data);
         e?.target?.reset()

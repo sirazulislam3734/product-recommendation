@@ -21,7 +21,7 @@ const SignIn = () => {
     try {
     await signInWithGoogle();
       // // jwt token
-      // const {data} = await axios.post("http://localhost:4000/jwt", {email: result?.user?.email});
+      // const {data} = await axios.post("https://product-recommendation-server-beta.vercel.app/jwt", {email: result?.user?.email});
       // console.log(data);
       Swal.fire({
         title: "success!",

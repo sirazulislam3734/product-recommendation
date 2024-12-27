@@ -18,7 +18,7 @@ const MyRecommendationCard = ({ recommendation, recommendations, setRecommendati
           }).then((result) => {
             if (result.isConfirmed) {
               axios
-                .delete(`http://localhost:4000/recommendations-delete/${id}`)
+                .delete(`https://product-recommendation-server-beta.vercel.app/recommendations-delete/${id}`)
                 .then((res) => {
                   if (res.status === 200) {
                     Swal.fire("Deleted!", "My Recommendation has been deleted.", "success");

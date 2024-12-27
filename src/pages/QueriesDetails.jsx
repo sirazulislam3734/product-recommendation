@@ -13,7 +13,7 @@ const QueriesDetails = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [recommendations, setRecommendations] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:4000/addQueries`).then((res) => {
+    axios.get(`https://product-recommendation-server-beta.vercel.app/addQueries`).then((res) => {
       const newData = res.data?.filter(
         (recommendation) => recommendation._id === id
       );
@@ -44,7 +44,7 @@ const QueriesDetails = () => {
     addRecommendationData.queryUserName = userData?.name;
     console.log(addRecommendationData);
     axios
-      .post("http://localhost:4000/recommendations", addRecommendationData)
+      .post("https://product-recommendation-server-beta.vercel.app/recommendations", addRecommendationData)
       .then((res) => {
         Swal.fire({
           title: "ERROR",

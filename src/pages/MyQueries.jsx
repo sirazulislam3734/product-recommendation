@@ -18,7 +18,7 @@ const MyQueries = () => {
       const fetchData = async () => {
         try {
           const res = await axios.get(
-            `http://localhost:4000/addQueries/${user.email}`
+            `https://product-recommendation-server-beta.vercel.app/addQueries/${user.email}`
           );
           setQueries(res.data);
         } catch (error) {

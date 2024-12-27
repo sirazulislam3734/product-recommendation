@@ -21,12 +21,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch('http://localhost:4000/addQueries')
+        loader: () => fetch('https://product-recommendation-server-beta.vercel.app/addQueries')
       },
       {
         path: "/queries",
         element: <Queries />,
-        loader: () => fetch('http://localhost:4000/addQueries')
+        loader: () => fetch('https://product-recommendation-server-beta.vercel.app/addQueries')
       },
       {
         path: "/recommendationsFor",
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <PrivateRoute><Update /></PrivateRoute>,
-        loader: () => fetch('http://localhost:4000/addQueries')
+        loader: () => fetch('https://product-recommendation-server-beta.vercel.app/addQueries')
       },
     ],
   },

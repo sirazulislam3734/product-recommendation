@@ -57,12 +57,12 @@ const AuthProvider = ({ children }) => {
       try {
         if (currentUser?.email) {
           setUser(currentUser);
-          const { data } = await axios.post('http://localhost:4000/jwt',{ email: currentUser?.email },{ withCredentials: true })
+          const { data } = await axios.post('https://product-recommendation-server-beta.vercel.app/jwt',{ email: currentUser?.email },{ withCredentials: true })
           console.log(data);
         } 
         else {
           setUser(currentUser);
-          const { data } = await axios.get('http://localhost:4000/logout',{withCredentials: true })
+          const { data } = await axios.get('https://product-recommendation-server-beta.vercel.app/logout',{withCredentials: true })
           console.log(data);
         }
       } 

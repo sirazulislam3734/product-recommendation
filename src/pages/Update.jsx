@@ -29,7 +29,7 @@ const Update = () => {
     };
     addQueriesData.recommendation_count = 0;
     axios
-      .put(`http://localhost:4000/update/${id}`, addQueriesData)
+      .put(`https://product-recommendation-server-beta.vercel.app/update/${id}`, addQueriesData)
       .then((res) => {
         setQueries(res.data);
         e.target.reset();
