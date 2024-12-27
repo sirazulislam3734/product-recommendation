@@ -45,7 +45,7 @@ const MyQueries = () => {
         <title>My Queries</title>
       </Helmet>
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 mt-20">
-        <div className="relative isolate overflow-hidden bg-white dark:bg-black dark:text-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm">
+        <div className="relative mx-auto isolate overflow-hidden bg-white dark:bg-black dark:text-white px-6 py-20 text-center sm:rounded-3xl sm:border sm:border-gray-100 sm:px-16 sm:shadow-sm">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-4xl">
             Add Query !
           </h2>
@@ -127,9 +127,8 @@ const MyQueries = () => {
       {queries.length > 0 ? (
         <>
           {/* Queries Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:px-10 md:px-5 px-2 md:my-10 my-5">
-            <Slide 
-              direction="right">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:px-5 px-2 md:my-10 my-5">
+            <Slide direction="right">
               {sortedQueries.map((query) => (
                 <ProductCard
                   key={query._id}

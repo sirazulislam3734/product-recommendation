@@ -70,12 +70,12 @@ const ProductCard = ({ query, setQueries, queries }) => {
             </span>{" "}
             {product_name}
           </span>
-          <span className="text-gray-400 flex-1">
+          <p className="text-gray-400 flex-1">
             <span className="text-black dark:text-white font-semibold">
               Pro_Brand:
             </span>{" "}
             {product_brand}
-          </span>
+          </p>
 
           <p className="text-gray-400 text-lg">
             <span className="text-black dark:text-white font-semibold">
@@ -112,24 +112,24 @@ const ProductCard = ({ query, setQueries, queries }) => {
         </div>
         <div className="space-x-3 mt-3">
           <Link to={`/queryDetails/${_id}`}>
-            <button className="px-6 py-2 font-serif hover:text-white mb-2 hover:bg-black border-gray-700 rounded-xl text-lg border">
+            <button className="px-4 py-2 font-serif hover:text-white mb-2 hover:bg-black border-gray-700 rounded-xl text-lg border">
               Details
             </button>
           </Link>
           <Link to={`/update/${_id}`}>
-            <button className="px-6 py-2 font-serif hover:text-white hover:bg-green-400 mb-2 border-gray-700 rounded-xl text-lg border">
+            <button className="px-4 py-2 font-serif hover:text-white hover:bg-green-400 mb-2 border-gray-700 rounded-xl text-lg border">
               Update
             </button>
           </Link>
           <button
             onClick={() => handleDeleteBtn(_id)}
-            className="px-6 py-2 font-serif hover:text-white mb-2 hover:bg-red-400 border-gray-700 rounded-xl text-lg border"
+            className="px-4 py-2 font-serif hover:text-white mb-2 hover:bg-red-400 border-gray-700 rounded-xl text-lg border"
           >
             Delete
           </button>
         </div>
         <svg
-          class="group-hover:opacity-100 opacity-0 transition-opacity absolute right-[10px] bottom-[120px]"
+          class="group-hover:opacity-100 opacity-0 transition-opacity absolute right-[10px] bottom-[150px]"
           xmlns="http://www.w3.org/2000/svg"
           width="45"
           height="64"
