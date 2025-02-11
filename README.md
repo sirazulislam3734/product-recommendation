@@ -36,4 +36,4 @@ Backend functionality to manage product data, recommendations, and user interact
 
 
 ### **Project Deployed Link**
-   - **Live Deploy Link:** https://product-recommendation-system.netlify.app
+   - **Live Deploy Link:** https://product-recommendation-93228.web.app
