@@ -30,7 +30,7 @@ const ExtraSection2 = () => {
             <div class="pt-5 text-base font-semibold leading-7">
               <p>
                 <a
-                  href="#"
+                  href="https://kms-solutions.asia/mvp-development"
                   class="text-sky-500 transition-all duration-300 group-hover:text-white"
                 >
                   Read the docs &rarr;
@@ -68,7 +68,7 @@ const ExtraSection2 = () => {
             <div class="pt-5 text-base font-semibold leading-7">
               <p>
                 <a
-                  href="#"
+                  href="https://peerdh.com/blogs/programming-insights/real-time-feedback-mechanisms-in-interactive-applications"
                   class="text-sky-500 transition-all duration-300 group-hover:text-white"
                 >
                   Read the docs &rarr;
@@ -93,7 +93,7 @@ const ExtraSection2 = () => {
             <div class="pt-5 text-base font-semibold leading-7">
               <p>
                 <a
-                  href="#"
+                  href="https://www.tutorialspoint.com/exploring-statistical-modelling-with-r"
                   class="text-sky-500 transition-all duration-300 group-hover:text-white"
                 >
                   Read the docs &rarr;

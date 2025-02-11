@@ -15,7 +15,7 @@ const ProductSection = ({ data }) => {
               direction="left"
               triggerOnce
               duration="1000">
-            {data.slice(0,6).map((query) => (
+            {data.slice(0,5).map((query) => (
               <ProductCard
                 key={query._id}
                 // setQueries={setQueries}

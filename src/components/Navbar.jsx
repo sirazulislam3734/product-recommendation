@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="mx-auto fixed z-10 top-0 lg:px-12 md:px-6 px-3 bg-blue-600 container">
+      <div className="mx-auto fixed z-10 top-0 lg:px-10 md:px-6 px-3 bg-blue-600 container">
         <Helmet>
           <title>Navbar</title>
         </Helmet>
