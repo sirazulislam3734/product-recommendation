@@ -99,10 +99,12 @@ const Navbar = () => {
                 )}
               </ul>
             </div>
+            <Link to='/'>
             <a className="flex items-center font-logo font-bold text-white md:text-2xl text-lg gap-3">
               {" "}
               Product Recommendation
             </a>
+            </Link>
           </div>
           <div className="navbar-center lg:ml-12 hidden lg:flex">
             <ul className="menu menu-horizontal text-white px-1">

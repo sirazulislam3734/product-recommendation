@@ -9,7 +9,7 @@ const ErrorPage = () => {
         <Helmet>
         <title>404 Error</title>
         </Helmet>
-      <div className='container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12'>
+      <div className='container md:pt-32 pt-20 min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12'>
         <div className='wf-ull lg:w-1/2'>
           <p className='text-sm font-medium text-gray-500'>404 error</p>
           <h1 className='mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl'>

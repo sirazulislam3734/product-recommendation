@@ -48,7 +48,7 @@ const Update = () => {
         <Helmet>
         <title>Update Queries</title>
         </Helmet>
-      <div className="lg:flex justify-center px-3 items-center min-h-[calc(100vh-306px)] my-12">
+      <div className="lg:flex md:pt-32 pt-20 justify-center px-3 items-center min-h-[calc(100vh-306px)] my-12">
         <section className=" p-2 md:p-6 mx-auto bg-white rounded-md shadow-md ">
           <h2 className="text-3xl text-center md:my-5 font-semibold text-gray-700 capitalize ">
             Update Queries

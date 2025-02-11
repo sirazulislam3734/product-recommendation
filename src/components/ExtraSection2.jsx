@@ -6,12 +6,14 @@ import { Fade } from "react-awesome-reveal";
 const ExtraSection2 = () => {
   return (
     <div className="dark:bg-gray-800 dark:text-white md:px-8 lg:px-12">
+      <Fade direction="up">
       <div className="lg:w-3/5 text-center mx-auto lg:my-10 md:my-5 my-3">
         <h2 className="text-2xl lg:text-4xl font-bold text-blue-700 md:text-3xl">Powerful Development Tools</h2>
         <p className="text-gray-600 dark:text-white"> "Access a comprehensive suite of features designed to streamline your development process, whether you're prototyping new ideas, implementing complex functionalities, or creating production-ready solutions."</p>
       </div>
+      </Fade>
       <div className="relative lg:flex space-y-3 gap-5 justify-between md:px-5 px-3 items-center overflow-hidden bg-gray-50 dark:bg-gray-800 dark:text-white py-6 sm:py-8">
-        <Fade direction="left">
+        <Fade direction="up">
         <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white dark:bg-gray-800 dark:text-white pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 px-6 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
           <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[10]"></span>
           <div class="relative z-10 mx-auto max-w-md">
@@ -76,7 +78,7 @@ const ExtraSection2 = () => {
           </div>
         </div>
         </Fade>
-        <Fade direction="right">
+        <Fade direction="up">
         <div className="group relative rounded-xl cursor-pointer overflow-hidden bg-white dark:bg-gray-800 dark:text-white pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 px-6 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
           <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[10]"></span>
           <div class="relative z-10 mx-auto max-w-md">

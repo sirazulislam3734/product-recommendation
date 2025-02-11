@@ -34,7 +34,7 @@ const Queries = () => {
   };
   
   return (
-    <div className="container lg:pt-32 px-6 py-10 mx-auto min-h-[calc(100vh-306px)] flex flex-col justify-between">
+    <div className="container md:pt-32 pt-20 px-6 py-10 mx-auto min-h-[calc(100vh-306px)] flex flex-col justify-between">
         <Helmet>
             <title>All Queries</title>
         </Helmet>
