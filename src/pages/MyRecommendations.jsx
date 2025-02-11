@@ -17,7 +17,7 @@ const MyRecommendations = () => {
     });
   }, [user]);
   return (
-    <section className="container px-4 dark:bg-black dark:text-white mx-auto my-12">
+    <section className="container lg:pt-32 px-4 dark:bg-black dark:text-white mx-auto my-12">
       <Helmet>
         <title>My Recommendation</title>
       </Helmet>

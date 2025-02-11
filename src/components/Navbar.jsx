@@ -40,12 +40,12 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="lg:px-16 md:px-8 px-2 bg-blue-300">
+    <div className="">
+      <div className="mx-auto fixed z-10 top-0 lg:px-12 md:px-6 px-3 bg-blue-600 container">
         <Helmet>
           <title>Navbar</title>
         </Helmet>
-        <div className="navbar bg-blue-300">
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div

@@ -40,7 +40,7 @@ const MyQueries = () => {
   });
 
   return (
-    <div className="lg:px-16 md:px-8 px-2">
+    <div className="lg:px-16 lg:pt-16 md:px-8 px-2">
       <Helmet>
         <title>My Queries</title>
       </Helmet>

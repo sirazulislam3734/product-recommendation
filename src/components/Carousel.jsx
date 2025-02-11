@@ -15,7 +15,7 @@ import bgimg3 from "../assets/images3.jpeg";
 
 export default function Carousel() {
   return (
-    <div className="container py-10 mx-auto">
+    <div className="container lg:pt-32 pb-3 mx-auto">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -32,25 +32,25 @@ export default function Carousel() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="hero-content dark:bg-black dark:text-white lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
-          <Fade direction="right">
+          <div className="hero-content dark:bg-black dark:text-white lg:mx-20 md:mx-8 mx-3 flex-col lg:flex-row-reverse">
+          
             <img
               src={bgimg1}
-              className="w-full md:max-w-md h-52 rounded-lg shadow-2xl"
+              className="w-full md:max-w-md h-52 rounded-xl shadow-2xl"
             />
-            </Fade>
+            
             <div className="w-full">
-              <Fade direction="left">
+              
               <h1 className="lg:text-5xl md:text-3xl text-2xl border-l-blue-500 border-l-8 md:pl-2 pl-1 font-bold lg:mb-4 md:mb-2 mb-1">
                 Feature-based
               </h1>
-              </Fade>
-              <Fade direction="left">
+              
+              
               <h2 className="lg:text-3xl md:text-2xl text-xl font-bold">
                 Recommendation system!
               </h2>
-              </Fade>
-              <Fade direction="left">
+              
+              
               <p className="lg:py-4 md:py-2 py-1">
                 The explosive growth of the world-wide-web and the emergence of
                 e-commerce has led to the development of recommender systems--a
@@ -74,38 +74,32 @@ export default function Carousel() {
                   ></path>
                 </svg>
               </button>
-              </Fade>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="hero-content dark:bg-black dark:text-white lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
-          <Fade direction="right">
             <img
               src={bgimg2}
-              className="w-full md:max-w-md h-52 rounded-lg shadow-2xl"
+              className="w-full md:max-w-md h-52 rounded-xl shadow-2xl"
             />
-            </Fade>
+            
             <div className="w-full">
-            <Fade direction="left">
               <h1 className="lg:text-5xl md:text-3xl text-2xl border-l-blue-500 border-l-8 md:pl-2 pl-1 font-bold lg:mb-4 md:mb-2 mb-1">
                 Multi Clustering
               </h1>
-            </Fade>
-            <Fade direction="left">
+            
               <h2 className="lg:text-3xl md:text-2xl text-xl font-bold">
                 {" "}
                 Recommendation System for Fashion Retail!
               </h2>
-              </Fade>
-              <Fade direction="left">
+              
               <p className="lg:py-4 md:py-2 py-1">
                 Personalized Career Counseling provides tailored guidance to
                 help individuals identify their unique strengths, interests, and
                 goals. Through one-on-one sessions, we explore career
                 opportunities, build actionable plans, and empower clients to
-                make confident, informed decisions about their professional
-                future.
+                make confident, professional future.
               </p>
               <button class="flex overflow-hidden ring-[5px] ring-white w-[6.8rem] hover:w-[8.5rem] items-center gap-3 cursor-pointer bg-gradient-to-r from-violet-500 to-blue-500 text-white font-bold px-5 py-2 rounded-xl transition-all ease-in-out hover:scale hover:scale-105 font-[revert] active:scale-100 shadow-lg">
                 Explore
@@ -124,30 +118,25 @@ export default function Carousel() {
                   ></path>
                 </svg>
               </button>
-              </Fade>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="hero-content dark:bg-black dark:text-white lg:mx-20 md:mx-10 mx-3 flex-col lg:flex-row-reverse">
-          <Fade direction="right">
+          
             <img
               src={bgimg3}
-              className="w-full md:max-w-md h-52 rounded-lg shadow-2xl"
+              className="w-full md:max-w-md h-52 rounded-xl shadow-2xl"
             />
-            </Fade>
+            
             <div className="w-full">
-            <Fade direction="left">
+            
             <h1 className="lg:text-5xl md:text-3xl text-2xl border-l-blue-500 border-l-8 md:pl-2 pl-1 font-bold lg:mb-4 md:mb-2 mb-1">
                 Product collection
               </h1>
-            </Fade>
-            <Fade direction="left">
               <h2 className="lg:text-3xl md:text-2xl text-xl font-bold">
                 Recommendation in online retail!
               </h2>
-              </Fade>
-              <Fade direction="left">
               <p className="lg:py-4 md:py-2 py-1">
                 Your Career, Your Path offers customized career counseling to
                 help you take control of your professional journey. We work with
@@ -172,7 +161,6 @@ export default function Carousel() {
                   ></path>
                 </svg>
               </button>
-              </Fade>
             </div>
           </div>
         </SwiperSlide>

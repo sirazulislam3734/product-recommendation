@@ -5,7 +5,7 @@ import { Slide } from "react-awesome-reveal";
 const ProductSection = ({ data }) => {
   return (
     <div>
-      <div className="sm:p-16">
+      <div className="sm:p-10">
         <div class="dark:bg-gray-900 border md:p-5 p-3 rounded-xl dark:text-white text-black">
           <h2 className="text-2xl text-center lg:my-8 md:my-4  md:mx-10 mx-5 my-2 font-bold">
             Select a Product section to get started
