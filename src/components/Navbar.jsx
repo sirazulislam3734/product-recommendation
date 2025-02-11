@@ -34,7 +34,7 @@ const Navbar = () => {
         Swal.fire({
           title: "ERROR!",
           text: `${error.message}`,
-          icon: "error",
+          icon: "error"
         });
       });
   };
